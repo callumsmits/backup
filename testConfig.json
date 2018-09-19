@@ -1,0 +1,21 @@
+{
+  "startTime": {
+    "hour": 2,
+    "minute": 34
+  },
+  "endTime": {
+    "hour": 23,
+    "minute": 0
+  },
+  "directories": [
+    "testDir",
+    "testDir2"
+  ],
+  "ignoredFiles": [
+    ".DS_Store",
+    "Thumbs.db"
+  ],
+  "dropboxTarget": "",
+  "dropboxToken": "mqqPknAfd_EAAAAAAAAlYDrjauHX-Z4tpjUMUnikjWYzznRI8Fiya6SXvfsqSpYC",
+  "encryptionPassword": "80e846caff6c73592188578576c703f962702b5cbc423eee344c610b742ec1c2"
+}

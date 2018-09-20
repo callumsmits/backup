@@ -10,15 +10,14 @@ import qualified Data.List                     as List
 import qualified Control.Monad                 as M
 
 
-processDirectory :: FilePath -> IO ([FilePath], [FilePath], [FilePath])
+processDirectory :: FilePath -> IO [FilePath]
 processDirectory p = do
   ls <- map (p </>) <$> IO.listDirectory p
   files <- M.filterM IO.doesFileExist ls
   directories <- M.filterM IO.doesDirectoryExist ls
-  print ls
-  print files
-  print directories
-  return (ls, files, directories)  
+  nested <- concat <$> mapM processDirectory directories
+  let combined = files ++ nested
+  return combined
 
 
 main :: IO ()
